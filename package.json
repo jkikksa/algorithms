@@ -1,0 +1,26 @@
+{
+  "name": "algorithms",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha algorithms/**/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jkikksa/algorithms.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jkikksa/algorithms/issues"
+  },
+  "homepage": "https://github.com/jkikksa/algorithms#readme",
+  "dependencies": {
+    "mocha": "^4.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.10.0",
+    "eslint-config-htmlacademy": "^0.3.2"
+  }
+}
