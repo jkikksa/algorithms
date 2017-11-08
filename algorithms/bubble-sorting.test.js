@@ -1,14 +1,13 @@
 const assert = require(`assert`);
 const algorithm = require(`./bubble-sorting`);
-
-const getRandomArray = (length, max) => {
-  return [...new Array(length)].map(() => Math.floor(Math.random() * max));
-};
+const getRandomArray = require(`../utils/get-random-array`);
 
 describe(`Bubble-sorting`, () => {
-  it(`25 элементов в массиве`, () => {
-    const randomArray = getRandomArray(25, 55);
+  it(`Случайный массив`, () => {
+    const randomArray = getRandomArray();
+    console.log(`Случайный массив ${randomArray}`);
     const expectedArray = Array.from(randomArray).sort((a, b) => a - b);
+    console.log(`Ожидаемый массив ${expectedArray}`);
     assert.deepEqual(algorithm(randomArray), expectedArray);
   });
 });
