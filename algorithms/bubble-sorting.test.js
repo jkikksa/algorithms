@@ -7,7 +7,7 @@ const getRandomArray = (length, max) => {
 
 describe(`Bubble-sorting`, () => {
   it(`25 элементов в массиве`, () => {
-    const randomArray = getRandomArray(8, 10);
+    const randomArray = getRandomArray(25, 55);
     const expectedArray = Array.from(randomArray).sort((a, b) => a - b);
     assert.deepEqual(algorithm(randomArray), expectedArray);
   });
