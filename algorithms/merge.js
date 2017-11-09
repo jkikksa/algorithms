@@ -1,20 +1,24 @@
 module.exports = (left, right) => {
+  const leftLength = left.length;
+  const rightLength = right.length;
   let result = [];
+  let i = 0;
+  let j = 0;
 
-  while (left.length > 0 && right.length > 0) {
-    if (left[0] <= right[0]) {
-      result.push(left.shift());
+  while (i < leftLength && j < rightLength) {
+    if (left[i] <= right[j]) {
+      result.push(left[i++]);
     } else {
-      result.push(right.shift());
+      result.push(right[j++]);
     }
   }
 
-  if (left.length > 0) {
-    result = [...result, ...left];
+  while (i < leftLength) {
+    result.push(left[i++]);
   }
 
-  if (right.length > 0) {
-    result = [...result, ...right];
+  while (j < rightLength) {
+    result.push(right[j++]);
   }
 
   return result;
